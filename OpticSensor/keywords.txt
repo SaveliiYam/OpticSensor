@@ -1,4 +1,4 @@
-OpticSensor KEYWORD1
-int KEYWORD1
+OpticSensor	KEYWORD1
+int	KEYWORD1
 
-let KEYWORD2
+let	KEYWORD2
