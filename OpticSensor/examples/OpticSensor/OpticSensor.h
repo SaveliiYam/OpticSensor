@@ -1,3 +1,6 @@
+/* Данный класс настроен выдавать true
+   только, если оъект в зоне действия датчика
+*/
 #pragma once
 #include <Arduino.h>
 
@@ -11,7 +14,7 @@ class OpticSensor{
 			_pin = pin;
 			pinMode(_pin, INPUT_PULLUP);
 		}
-		bool let(){
+		bool let(){ // если объект находится в зоне действия оптического датчика - true
 			bool opticState = digitalRead(_pin);
 			if(!opticState && !_flag && millis() - _tmr >= 50){
 				_tmr = millis();
